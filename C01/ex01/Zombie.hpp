@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smenna <smenna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 13:46:48 by smenna            #+#    #+#             */
-/*   Updated: 2021/09/21 13:46:49 by smenna           ###   ########.fr       */
+/*   Created: 2021/09/20 15:43:11 by smenna            #+#    #+#             */
+/*   Updated: 2021/09/21 13:48:58 by smenna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int main()
+# include <iostream>
+# include <string>
+
+class Zombie
 {
-    Zombie* zombie = newZombie("Ernesto");
-    randomChump("Paolo");
-    delete zombie;
-    return 0;
-}
+public:
+	Zombie( void );
+	~Zombie( void );
+	
+	void announce( void );
+	void set_name(std::string name);
+	
+private:
+	std::string _name;
+	
+};
+
+Zombie* newZombie( std::string name );
+Zombie* zombieHorde( int N, std::string name );
+
+#endif
