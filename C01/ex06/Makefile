@@ -1,4 +1,4 @@
-NAME = karen
+NAME = karenFilter
 
 COMPILER = clang++
 FLAGS = -Wall -Wextra -Werror

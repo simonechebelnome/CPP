@@ -3,6 +3,6 @@
 int main()
 {
     Karen myKaren;
-    myKaren.complain("debug");
+    myKaren.complain("DEBUG");
     return 0;
 }
