@@ -6,7 +6,7 @@
 /*   By: smenna <smenna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 15:23:32 by smenna            #+#    #+#             */
-/*   Updated: 2021/09/24 14:07:27 by smenna           ###   ########.fr       */
+/*   Updated: 2021/09/24 15:30:51 by smenna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ int main(int argc, char *argv[])
 	read_file.open(file_name);
 	if(!read_file)
 		return(return_error("Read File creation failed!"));
-
+	if (read_file.peek() == std::ifstream::traits_type::eof())
+		return(return_error("Empty file!"));
+		
 	write_file.open(file_name + ".replace");
 	if(!write_file)
 		return(return_error("Write File creation failed!"));

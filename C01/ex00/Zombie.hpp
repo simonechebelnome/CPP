@@ -6,7 +6,7 @@
 /*   By: smenna <smenna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:43:11 by smenna            #+#    #+#             */
-/*   Updated: 2021/09/20 16:08:31 by smenna           ###   ########.fr       */
+/*   Updated: 2021/09/24 15:10:47 by smenna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@
 class Zombie
 {
 public:
-	Zombie( void );
+	Zombie(std::string name);
 	~Zombie( void );
 	
 	void announce( void );
-	void set_name(std::string name);
 	
 private:
 	std::string _name;

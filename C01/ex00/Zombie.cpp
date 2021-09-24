@@ -6,14 +6,15 @@
 /*   By: smenna <smenna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 13:46:57 by smenna            #+#    #+#             */
-/*   Updated: 2021/09/21 13:46:58 by smenna           ###   ########.fr       */
+/*   Updated: 2021/09/24 15:11:30 by smenna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+Zombie::Zombie(std::string name)
 {
+    this->_name = name;
     return ;
 }
 
@@ -29,9 +30,4 @@ void Zombie::announce()
     return ;
 }
 
-void Zombie::set_name(std::string name)
-{
-    this->_name = name;
-    return ;
-}
 
