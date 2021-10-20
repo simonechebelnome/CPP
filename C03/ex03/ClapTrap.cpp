@@ -40,7 +40,7 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(ClapTrap const &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	*this = other; //! This can technically does the same thing 
+	*this = other; //! This can technically do the same thing 
 	return (*this);
 }
 
@@ -64,7 +64,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     return ; 
 }
 
-std::string ClapTrap::getName() const
+std::string const &ClapTrap::getName() const
 {
     return this->_name;
 }

@@ -1,12 +1,9 @@
-#include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    FragTrap Zombie("Rob");
-	FragTrap human("Jimmy");
+    DiamondTrap Zombie("Rob");
+	DiamondTrap human("Jimmy");
 
 	human = Zombie;
 

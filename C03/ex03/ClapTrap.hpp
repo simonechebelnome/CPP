@@ -26,7 +26,7 @@ public:
     virtual void attack(std::string const &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
-    virtual std::string getName() const;
+    virtual std::string const &getName() const;
 
     ClapTrap& operator=(const ClapTrap &value);
 protected:

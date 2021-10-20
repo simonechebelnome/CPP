@@ -4,7 +4,7 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 	std::cout << "DiamondTrap default construct called." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other) {
+DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(), FragTrap(){
 	*this = other;
 	std::cout << "DiamondTrap copy construct called." << std::endl;
 }

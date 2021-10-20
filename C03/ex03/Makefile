@@ -1,4 +1,4 @@
-NAME = DiamondTrap
+NAME = diamondTrap
 
 COMPILER = g++
 FLAGS = -Wall -Wextra -Werror
