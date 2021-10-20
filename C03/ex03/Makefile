@@ -1,9 +1,9 @@
-NAME = fragTrap
+NAME = DiamondTrap
 
 COMPILER = g++
 FLAGS = -Wall -Wextra -Werror
 
-SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
+SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
