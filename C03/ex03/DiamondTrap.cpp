@@ -5,6 +5,7 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(), FragTrap(){
+    //* Questo puntatore in C è importantissimo in quanto contiene l'indirizzo di quest'oggetto nella memoria
 	*this = other;
 	std::cout << "DiamondTrap copy construct called." << std::endl;
 }

@@ -1,0 +1,5 @@
+1 - Aggiornare tutti i Makefie con quello di (C04 ex00)
+2 - Prima di pushare, chiaramente, ricontrolla con il pdf delle valutazioni
+
+3 - IMPORTANTE! CAMBIA COMPILATORE DA G++ A CLANG++ !!!!
+
