@@ -3,10 +3,12 @@
 Cat::Cat(){
     std::cout << "Calling Cat class constructor" << std::endl;
     this->type = "Cat";
+    this->animalBrain = new Brain();
 }
 
 Cat::~Cat(){
     std::cout << "Calling Cat class destructor" << std::endl;
+    delete this->animalBrain;
 }
 
 void Cat::makeSound() const{
@@ -19,6 +21,7 @@ std::string Cat::getType() const{
 
 Cat &Cat::operator=(Cat const &other) {
 	this->type = other.type;
+	this->animalBrain = other.animalBrain;
 	return *this;
 }
 
