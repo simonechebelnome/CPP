@@ -2,15 +2,15 @@
 
 int main()
 {
-    DiamondTrap Zombie("Rob");
-	DiamondTrap human("Jimmy");
+    DiamondTrap lollo("lollo");
+    DiamondTrap franco("franco");
+    DiamondTrap gigi("gigi");
+    DiamondTrap bo;
 
-	human = Zombie;
-
-	human.attack("Jimmy");
-	human.beRepaired(10);
-	human.takeDamage(20);
-	human.highFivesGuys();
-
-	return 0;
+    lollo.attack("franco");
+    franco.takeDamage(10);
+    gigi.attack("franco");
+    franco.takeDamage(10);
+    franco.beRepaired(100);
+    gigi.whoAmI();
 }

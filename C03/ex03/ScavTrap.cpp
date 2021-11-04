@@ -12,7 +12,7 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( void ) : ClapTrap() {
+ScavTrap::ScavTrap( void ) : ClapTrap(){
     this->gateMode = false;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
