@@ -1,32 +1,57 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: smenna <smenna@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/24 09:49:45 by smenna            #+#    #+#              #
-#    Updated: 2021/09/24 14:42:12 by smenna           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#Name
+NAME =			phonebook
 
-NAME = phonebook
+#Compiler
+CC = 			g++
+CFLAGS = 		-Wall -Wextra -Werror -std=c++98
+LIBRARIES =
+CFLAG = 		-c
+OFLAG =			-o
+IFLAG =			-I
 
-COMPILER = clang++
-FLAGS = -Wall -Wextra -Werror
+#Make
+MAKE = 			make -s -C
+MAKE_CLEAN = 	make clean -s -C
+MAKE_FCLEAN = 	make fclean -s -C
 
-SRC = main.cpp Contact.cpp
+#Unzip
+UNZIP =			unzip -X -o -q
 
-OBJ = $(SRC:.cpp=.o)
+#Shell
+MKDIR =			mkdir -p
+CP =			cp
+RM =			rm -rf
 
-all:
-	$(COMPILER) $(FLAGS) -c $(SRC)
-	$(COMPILER) $(OBJ) -o $(NAME)
+#Directories
+SOURCES_DIR =	./src
+OBJECTS_DIR =	./objs
+HEADERS_DIR =	./includes
+
+#Files
+FILES =			main.cpp Contact.cpp
+
+#Srcs
+SRCS =			$(foreach FILE, $(FILES), $(shell find $(SOURCES_DIR) -name $(FILE)))
+
+#Objs
+OBJS =			$(patsubst $(SOURCES_DIR)/%, $(OBJECTS_DIR)/%, $(SRCS:.cpp=.o))
+
+$(OBJECTS_DIR)/%.o: $(SOURCES_DIR)/%.cpp
+	@$(MKDIR) $(@D)
+	@$(CC) $(CFLAGS) $(IFLAG) $(HEADERS_DIR) $(CFLAG) $(OFLAG) $@ $<
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBRARIES) $(OFLAG) $(NAME)
+	@printf '\x1B[35mDONE!\033[0m\n'
 
 clean:
-	rm -rf $(OBJ)
+	@$(RM) $(OBJECTS_DIR)
 
 fclean: clean
-	rm -rf $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all norminette clean fclean re
