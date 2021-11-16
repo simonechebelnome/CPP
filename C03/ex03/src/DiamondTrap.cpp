@@ -1,4 +1,4 @@
-#include "DiamondTrap.hpp"
+#include "../includes/DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 	std::cout << "DiamondTrap default construct called." << std::endl;

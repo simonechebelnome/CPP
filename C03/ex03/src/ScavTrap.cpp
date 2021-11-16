@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: smenna <smenna@student.42roma.it>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 13:05:43 by smenna            #+#    #+#             */
-/*   Updated: 2021/10/16 13:05:43 by smenna           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "../includes/ScavTrap.hpp"
 
-#include "ScavTrap.hpp"
-
-ScavTrap::ScavTrap( void ) : ClapTrap() {
+ScavTrap::ScavTrap( void ) : ClapTrap(){
     this->gateMode = false;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;

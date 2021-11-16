@@ -1,6 +1,6 @@
+#include "../includes/ClapTrap.hpp"
+#include "../includes/ScavTrap.hpp"
 #include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
 int main()
 {

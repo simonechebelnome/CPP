@@ -1,4 +1,4 @@
-#include "DiamondTrap.hpp"
+#include "../includes/DiamondTrap.hpp"
 
 int main()
 {

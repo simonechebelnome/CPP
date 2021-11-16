@@ -1,4 +1,4 @@
-#include "FragTrap.hpp"
+#include "../includes/FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap() {
 	this->_hitPoints = 100;

@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: smenna <smenna@student.42roma.it>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 13:05:38 by smenna            #+#    #+#             */
-/*   Updated: 2021/10/16 13:05:38 by smenna           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ClapTrap.hpp"
+#include "../includes/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string const &name) : _energyPoints(10), _hitPoints(10), _attackDamage(0), _name(name) 
 {

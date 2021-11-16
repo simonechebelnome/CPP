@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: smenna <smenna@student.42roma.it>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 13:05:43 by smenna            #+#    #+#             */
-/*   Updated: 2021/10/16 13:05:43 by smenna           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ScavTrap.hpp"
+#include "../includes/ScavTrap.hpp"
 
 ScavTrap::ScavTrap( void ) : ClapTrap() {
     this->gateMode = false;

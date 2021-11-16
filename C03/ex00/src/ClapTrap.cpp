@@ -1,4 +1,4 @@
-#include "ClapTrap.hpp"
+#include "../includes/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string const &name) : _energyPoints(10), _hitPoints(10), _attackDamage(0), _name(name) 
 {
@@ -28,7 +28,7 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(ClapTrap const &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	*this = other; //! This can technically does the same thing 
+	*this = other; //! This can technically do the same thing 
 	return (*this);
 }
 
