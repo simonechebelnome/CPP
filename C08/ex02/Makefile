@@ -28,7 +28,7 @@ OBJECTS_DIR =	./objs
 HEADERS_DIR =	./includes
 
 #Files
-FILES =			main.cpp span.cpp
+FILES =			main.cpp
 
 #Srcs
 SRCS =			$(foreach FILE, $(FILES), $(shell find $(SOURCES_DIR) -name $(FILE)))
