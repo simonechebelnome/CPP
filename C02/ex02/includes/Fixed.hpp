@@ -1,20 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: smenna <smenna@student.42roma.it>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/15 16:45:06 by smenna            #+#    #+#             */
-/*   Updated: 2021/10/15 16:45:06 by smenna           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef FIXED_CLASS_HPP
-# define FIXED_CLASS_HPP
+#define FIXED_CLASS_HPP
 
-# include <cmath>
-# include <iostream>
+#include <cmath>
+#include <iostream>
 
 class Fixed
 {
