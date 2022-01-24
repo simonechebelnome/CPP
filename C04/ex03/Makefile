@@ -2,7 +2,7 @@
 NAME =			materia
 
 #Compiler
-CC = 			g++
+CC = 			clang++
 CFLAGS = 		-Wall -Wextra -Werror -std=c++98
 LIBRARIES =
 CFLAG = 		-c
