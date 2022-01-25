@@ -18,9 +18,6 @@ public:
 
 private:
     Brain* animalBrain;
-
-protected:
-    std::string type;
 };
 
 #endif

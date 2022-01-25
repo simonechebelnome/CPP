@@ -17,9 +17,6 @@ public:
     void makeSound() const;
 private:
     Brain* animalBrain;
-
-protected:
-    std::string type;
 };
 
 #endif
