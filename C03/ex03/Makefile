@@ -14,9 +14,6 @@ MAKE = 			make -s -C
 MAKE_CLEAN = 	make clean -s -C
 MAKE_FCLEAN = 	make fclean -s -C
 
-#Unzip
-UNZIP =			unzip -X -o -q
-
 #Shell
 MKDIR =			mkdir -p
 CP =			cp
