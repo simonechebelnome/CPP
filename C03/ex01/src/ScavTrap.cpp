@@ -34,6 +34,12 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
 	return (*this);
 }
 
+void ScavTrap::attack(std::string const &target)
+{
+    std::cout << this->_name << " Attacks " << target << ", causing " << this->_attackDamage << " DAMAGE! OMGGGGGGG" << std::endl;
+    return ; 
+}
+
 void ScavTrap::guardGate() {
     this->gateMode = !gateMode;
     std::cout << "Scavtrap " << (gateMode ? "entered" : "left") << " gate keeper mode" << std::endl;
