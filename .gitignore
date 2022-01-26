@@ -5,3 +5,4 @@
 .gitignore
 *.c
 /obj
+.DS_Store

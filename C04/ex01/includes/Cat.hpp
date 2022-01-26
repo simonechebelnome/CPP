@@ -10,7 +10,7 @@ class Cat : public Animal {
 public:
     Cat();
     Cat( Cat const &copy );
-    ~Cat();
+    virtual ~Cat();
 
     Cat &operator=( Cat const &copy );
     std::string getType() const;
