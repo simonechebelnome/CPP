@@ -22,9 +22,8 @@ Bureaucrat::~Bureaucrat() {
 }
 
 Bureaucrat &Bureaucrat::operator=( Bureaucrat const &copy ) {
-    *this->_name = copy._name;
-    *this->_grade = copy._grade;
-    return (*this);
+    _grade = copy._grade;
+    return *this;
 }
 
 Bureaucrat::Bureaucrat( Bureaucrat const &copy ) : _name(copy._name), _grade(copy._grade) {
@@ -37,7 +36,7 @@ unsigned int Bureaucrat::getGrade() const {
     return _grade;
 }
 
-std::string Bureaucrat::getName() const {
+const std::string Bureaucrat::getName() const {
     return _name;
 }
 
@@ -50,7 +49,7 @@ void Bureaucrat::incGrade() {
 
 void Bureaucrat::decGrade() {
     if(_grade == 150)
-        GradeTooHighException();
+        throw GradeTooHighException();
     _grade++;
     std::cout << "Bureaucrat " << getName() << " grade has been updated to " << getGrade() << std::endl;
 

@@ -36,6 +36,13 @@ int main(){
         std::cerr << error.what() << std::endl;
     }
 
+    try {
+        incTest.decGrade();
+        incTest.decGrade();
+    } catch (const std::exception &error) {
+        std::cerr << error.what() << std::endl;
+    }
+
     //* Show Results
 
     std::cout << "Output test >> " << incTest << "." << std::endl;

@@ -12,7 +12,7 @@ public:
     Bureaucrat &operator=( Bureaucrat const &copy );
     ~Bureaucrat();
 
-    std::string getName() const;
+    const std::string getName() const;
     unsigned int getGrade() const;
 
 
