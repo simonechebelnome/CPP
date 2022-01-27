@@ -20,7 +20,10 @@ Form::~Form() {
 }
 
 Form &Form::operator=( Form const &copy ) {
-    *this = copy;
+    *this->_name = copy.getName();
+    *this->_signGrade = copy.getSignGrade();
+    *this->_execGrade = copy.getExecGrade();
+    *this->_isSigned = copy.getSignStatus();
     return (*this);
 }
 

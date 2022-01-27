@@ -22,7 +22,8 @@ Bureaucrat::~Bureaucrat() {
 }
 
 Bureaucrat &Bureaucrat::operator=( Bureaucrat const &copy ) {
-    *this = copy;
+    *this->_name = copy._name;
+    *this->_grade = copy._grade;
     return (*this);
 }
 
