@@ -22,5 +22,7 @@ int main(){
     std::cout << "Deserialized: " << ptr << std::endl;
     uintptr_t serialized = serialize(ptr);
     std::cout << "Serialized data: " << serialized << std::endl;
-    std::cout << "Deserialized data: " << deserialize(serialized) << std::endl; 
+    std::cout << "Deserialized data: " << deserialize(serialized) << std::endl;
+
+    delete ptr;
 }
