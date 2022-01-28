@@ -22,7 +22,7 @@ public:
     Array( Array &copy ){
         _size = copy.size();
         _arr = new T[_size];
-        for(size_t i; i < _size; i++){
+        for(size_t i = 0; i < _size; i++){
             _arr[i] = copy._arr[i];
         } 
     }
@@ -52,7 +52,6 @@ public:
             return("Array out of bounds");
         }
     };
-
 };
 
 #endif

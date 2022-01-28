@@ -1,44 +1,50 @@
-#include "../includes/Array.hpp"
-#include <stdlib.h> 
 #include <iostream>
+#include <Array.hpp>
 
-#define SIZE 500
-
-int main(){
-    Array<int> iArr(SIZE);
-    int *copy = new int[SIZE];
+#define MAX_VAL 750
+int main(int, char**)
+{
+    Array<int> numbers(MAX_VAL);
+    int* mirror = new int[MAX_VAL];
     srand(time(NULL));
-
-    //! Filling the Arrays with random values
-    for(int i = 0; i < SIZE; i++){
-        const int ranValue = rand();
-        iArr[i] = ranValue;
-        copy[i] = ranValue;
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        const int value = rand();
+        numbers[i] = value;
+        mirror[i] = value;
     }
+    //SCOPE
+    Array<int> tmp = numbers;
+    Array<int> test(tmp);
 
-    //* Now we test if they're actually the same
-    for(int i = 0; i < SIZE; i++){
-        if (iArr[i] != copy[i]){
-            std::cerr << "Values are not the same!" << std::endl;
-            return -1;
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        if (mirror[i] != numbers[i])
+        {
+            std::cerr << "didn't save the same value!!" << std::endl;
+            return 1;
         }
     }
-
-    std::cout << "Both Arrays are equal!" << std::endl;
-
-    //! Now let's try to trigger the exception that we've created
     try {
-        iArr[-1] = 0;
-    } catch (std::exception const &err) {
-        std::cerr << err.what() << std::endl;
+        numbers[-2] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        numbers[MAX_VAL] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
     }
 
-    try {
-        iArr[SIZE] = 0;
-    } catch (std::exception const &err) {
-        std::cerr << err.what() << std::endl;
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        numbers[i] = rand();
     }
-
-    delete [] copy;
+    delete [] mirror;//
     return 0;
 }

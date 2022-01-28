@@ -14,9 +14,6 @@ MAKE = 			make -s -C
 MAKE_CLEAN = 	make clean -s -C
 MAKE_FCLEAN = 	make fclean -s -C
 
-#Unzip
-UNZIP =			unzip -X -o -q
-
 #Shell
 MKDIR =			mkdir -p
 CP =			cp
@@ -44,7 +41,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBRARIES) $(OFLAG) $(NAME)
-	@printf '\x1B[35mDONE!\033[0m\n'
+	@printf 'DONE!\n'
 
 clean:
 	@$(RM) $(OBJECTS_DIR)

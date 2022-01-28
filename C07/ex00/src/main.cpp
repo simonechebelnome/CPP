@@ -1,20 +1,26 @@
 #include "../includes/Templates.hpp"
 
-int main(){
-    //! Swap Test
-    swap<std::string>("ciao", "prova");
-    swap<int>(6, 9);
-    swap<float>(3.6f, 12.8f);
+int main( void ) {
+    int a = 2;
+    int b = 3;
+    ::swap( a, b );
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
-    //! Min Test
-    std::cout << min<int>(5, 6) << std::endl;
-    std::cout << min<std::string>("ciao", "prova") << std::endl;
-    std::cout << min<float>(5.5, 5.5) << std::endl;
+    //More Test
 
-    //! Max Test
-    std::cout << max<int>(5, 6) << std::endl;
-    std::cout << max<std::string>("ciao", "prova") << std::endl;
-    std::cout << max<float>(5.5, 5.5) << std::endl;
+    std::cout << std::endl << "Complex types tests" << std::endl;
 
-    return 0;
+    Awesome e(2), f(4); swap(e,f);
+    std::cout << "Awesome 1: " << e << "\tAwesome 2: " << f << std::endl;
+    std::cout << "Max: " << max(e, f) << std::endl;
+    std::cout << "Min: " << min(e, f) << std::endl;
+    return (0);
 }
