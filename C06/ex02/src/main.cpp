@@ -59,8 +59,7 @@ int main() {
     Base* type = generate();
 
     identify(type);
-    if (type != NULL)
-        identify(*type);
+    identify(*type);
 
     delete type;
     return 0;
