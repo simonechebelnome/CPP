@@ -53,6 +53,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@$(RM) $(OBJECTS_DIR)
+	@$(RM) Home_shrubbery
 
 fclean: clean
 	@$(RM) $(NAME)

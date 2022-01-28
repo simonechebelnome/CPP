@@ -5,7 +5,7 @@
 
 int main()
 {
-	Bureaucrat myBur(20, "Simone");
+	Bureaucrat myBur(4, "Simone");
 
 	ShrubberyCreationForm shrubbery("Home");
 	RobotomyRequestForm roboto("Roboto");

@@ -20,10 +20,7 @@ Form::~Form() {
 }
 
 Form &Form::operator=( Form const &copy ) {
-    *this->_name = copy.getName();
-    *this->_signGrade = copy.getSignGrade();
-    *this->_execGrade = copy.getExecGrade();
-    *this->_isSigned = copy.getSignStatus();
+    this->_isSigned = copy.getSignStatus();
     return (*this);
 }
 
@@ -50,7 +47,7 @@ bool Form::getSignStatus() const {
 }
 
 void Form::beSigned(Bureaucrat const &bureau){
-    if(bureau.getGrade() > _signGrade){
+    if(bureau.getGrade() < _signGrade){
         _isSigned = true;
     } else {
         throw GradeTooLowException();
@@ -64,7 +61,7 @@ void Form::execute(const Bureaucrat &executor) const {
 	}
 
 	if (executor.getGrade() > _execGrade)
-		throw GradeTooLowException();
+		throw GradeTooHighException();
 
 	this->execute();
 }
@@ -73,11 +70,11 @@ void Form::execute() const {
 }
 
 const char* Form::GradeTooHighException::what() const throw() {
-	return "Grade is too high";
+	return "Grade is too high, can't execute";
 }
 
 const char* Form::GradeTooLowException::what() const throw() {
-	return "Grade is too low";
+	return "Grade is too low, can't sign form";
 }
 
 std::ostream& operator<< (std::ostream& o, const Form& b) {
