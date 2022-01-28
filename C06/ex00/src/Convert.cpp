@@ -16,7 +16,7 @@ Convert::Convert( Convert const &copy ) : _value(copy._value) {
 }
 
 Convert &Convert::operator=( Convert const &copy ) {
-    *this = copy;
+    (void)copy;
     return (*this);
 }
 
