@@ -1,4 +1,4 @@
-#include "../includes/mutantstack.hpp"
+#include "../includes/MutantStack.hpp"
 
 int main()
 {
@@ -21,13 +21,40 @@ int main()
 	++it;
 	--it;
 
+    std::cout << "mstack: " << std::endl;
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
 		++it;
 	}
 
-	std::stack<int> s(mstack);
+	std::stack<int> c(mstack);
+
+    MutantStack<int> s;
+
+    s.push(10);
+    s.push(50);
+    s.push(3);
+
+    s.swap(mstack);
+
+
+    it = mstack.begin();
+    ite = mstack.end();
+    std::cout << "m stack: " << std::endl;
+    while (it != ite)
+    {
+        std::cout << *it << std::endl;
+        ++it;
+    }
+    std::cout << "s stack: " << std::endl;
+    it = s.begin();
+    ite = s.end();
+    while (it != ite)
+    {
+        std::cout << *it << std::endl;
+        ++it;
+    }
 
 	return 0;
 }
