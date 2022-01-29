@@ -4,7 +4,7 @@
 #include <iostream>
 #include <algorithm>
 
-template<typename T> typename T::iterator easyfind(T& container, int find){
+template<typename T> typename T::iterator easyFind(T& container, int find){
     //* Std::find actually returns an iterator (like most of these functions do)
     typename T::iterator result = std::find(container.begin(), container.end(), find);
     if (result == container.end())

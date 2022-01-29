@@ -1,5 +1,6 @@
-#include "../includes/span.hpp"
+#include "../includes/Span.hpp"
 #include <stdlib.h>
+#include <unistd.h>
 
 int main(){
     try {
@@ -7,7 +8,7 @@ int main(){
         sp.addNumber(23);
         sp.addNumber(18);
         sp.addNumber(54);
-        sp.addNumber(21);
+        sp.addNumber(18);
         sp.addNumber(2);
 
         std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
@@ -32,4 +33,22 @@ int main(){
     } catch (std::exception &err) {
         std::cerr << err.what() << std::endl;
     }
+
+    std::cout << "===========" << std::endl;
+    srand(time(NULL));
+
+    std::vector<int> span;
+    for(int i = 0; i < 100; i++){
+        span.push_back(rand() % 1000000);
+    }
+
+    Span mySpan(100);
+
+    try {
+        mySpan.addSpan(span.begin(), span.end());
+        std::cout << "Longest span: " << mySpan.longestSpan() << std::endl;
+    } catch (const std::exception &err) {
+        std::cerr << err.what() << std::endl;
+    }
+
 }

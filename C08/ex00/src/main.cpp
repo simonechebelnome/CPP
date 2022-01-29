@@ -20,21 +20,21 @@ int main(){
     //* Trying the find function
     std::cout << "\nFind element 1" << std::endl;
     try {
-        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyfind(myVec, 1)) << std::endl;
+        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyFind(myVec, 1)) << std::endl;
     } catch (std::exception &err) {
         std::cerr << err.what() << std::endl;
     }
 
     std::cout << "\nFind element 3" << std::endl;
     try {
-        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyfind(myVec, 3)) << std::endl;
+        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyFind(myVec, 3)) << std::endl;
     } catch (std::exception &err) {
         std::cerr << err.what() << std::endl;
     }
 
     std::cout << "\nFind element 6 (doesn't exist)" << std::endl;
     try {
-        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyfind(myVec, 6)) << std::endl;
+        std::cout << "Found element at position > " << std::distance(myVec.begin(), easyFind(myVec, 6)) << std::endl;
     } catch (std::exception &err) {
         std::cerr << err.what() << std::endl;
     }

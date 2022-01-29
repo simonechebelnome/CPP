@@ -14,9 +14,6 @@ MAKE = 			make -s -C
 MAKE_CLEAN = 	make clean -s -C
 MAKE_FCLEAN = 	make fclean -s -C
 
-#Unzip
-UNZIP =			unzip -X -o -q
-
 #Shell
 MKDIR =			mkdir -p
 CP =			cp
@@ -28,7 +25,7 @@ OBJECTS_DIR =	./objs
 HEADERS_DIR =	./includes
 
 #Files
-FILES =			main.cpp span.cpp
+FILES =			main.cpp Span.cpp
 
 #Srcs
 SRCS =			$(foreach FILE, $(FILES), $(shell find $(SOURCES_DIR) -name $(FILE)))
@@ -44,7 +41,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIBRARIES) $(OFLAG) $(NAME)
-	@printf '\x1B[35mDONE!\033[0m\n'
+	@printf 'DONE!'
 
 clean:
 	@$(RM) $(OBJECTS_DIR)

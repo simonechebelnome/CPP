@@ -17,6 +17,8 @@ public:
     ~Span();
 
     void addNumber(int num);
+    void addSpan(std::vector<int>::iterator start, std::vector<int>::iterator end);
+    const std::vector<int> getContainer() const { return _container; };
     int longestSpan();
     int shortestSpan();
 };
