@@ -1,5 +1,5 @@
 #Name
-NAME =			mutantStack
+NAME =			MutantStack
 
 #Compiler
 CC = 			g++
